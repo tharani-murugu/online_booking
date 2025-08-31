@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>  
+      <div class="head1">
+    <h2 class="fhead">Online Room Booking</h2>
+    <div>
+    <button class="btn1"><a href="index.html">Register</a></button>
+    <button class="btn1"> <a href="index.html">Sign In</a></button></div>
+   </div>
+  <nav>
+    <h1 id="headingb">Booking.com</h1>
+    <ul>
+      <li><a href="index5.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="index5.html">Booking</a></li>
+      <li><a href="#Contact">Contact</a></li>
+    </ul>
+  </nav>
+  
+  <section>
+     <div id="sn123" style="display: flex;justify-content: space-between;">
+        <div id="sn1"></div>
+        <div id="sn2"></div>
+        <div id="sn3"></div> 
+    </div>
+    <div id="default" style="border: 1px solid rgb(204, 204, 204); padding: 10px; margin: 30px 0px; border-radius: 8px;">
+      <h4>Dr.Naveena</h4>
+      <p>Great experience! Highly recommend.</p>
+      <div id="output"></div>
+     
+    </div>
+  </section>
+
+
+
+
+  <footer style="background-color:#1e3d59; color:white; padding:30px 0; margin-top:40px;">
+  <div style="max-width:1200px; margin:auto; display:flex; justify-content:space-between; flex-wrap:wrap;margin-left: 130px;">
+
+    <!-- About -->
+    <div style="flex:1; min-width:250px; padding:10px;">
+      <h3>Booking.com</h3>
+      <p>We provide the best online room booking experience with trusted reviews and secure payments.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div style="flex:1; min-width:200px; padding:10px;">
+      <h4>Quick Links</h4>
+      <ul style="list-style:none; padding:0;">
+        <li><a href="index5.html" style="color:white; text-decoration:none;">Home</a></li>
+        <li><a href="about.html" style="color:white; text-decoration:none;">About</a></li>
+        <li><a href="index5.html" style="color:white; text-decoration:none;">Booking</a></li>
+        <li><a href="#contact" style="color:white; text-decoration:none;">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div style="flex:1; min-width:200px; padding:10px;" id="Contact">
+      <h4>Contact Us</h4>
+      <p>Email: support@booking.com</p>
+      <p>Phone: +91 98765 43210</p>
+      <p>Location: Chennai, India</p>
+    </div>
+  </div>
+
+  <hr style="border:0.5px solid #555; margin:20px 0;">
+
+  <!-- Bottom -->
+  <div style="text-align:center; padding:1px;">
+    <p>&copy; 2025 Booking.com | All Rights Reserved</p>
+  </div>
+</footer>
+<script >
+    const head = document.createElement('h1');
+  head.textContent = "Guest reviews";
+  head.style.display='block';
+  document.getElementById('sn1').append(head);
+
+  const p = document.createElement('p');
+  p.textContent = "We aim 100% real Reviews";
+  p.style.fontSize = '12px';
+  p.style.color = "green";
+  p.style.marginTop = '30px';
+  p.style.fontWeight = 'bold';
+   head.style.display='block';
+  p.style.textDecoration = 'underline';
+  document.getElementById('sn2').append(p);
+
+  const button = document.createElement('button');
+  button.textContent = "Write a review";
+  button.style.border = 'none';
+  button.style.backgroundColor = "blue";
+  button.style.color = "white";
+  button.style.fontWeight = 'bold';
+  button.style.padding = '10px';
+  button.style.borderRadius = '10px';
+  button.style.marginTop = "20px";
+  //head.style.display='block';
+  document.getElementById('sn3').append(button);
+  button.onclick = function () {
+      window.location.href = "form.html";
+    };
+    const name = localStorage.getItem("Name");
+    const feedback = localStorage.getItem("feedback1");
+    if(name && feedback){
+      document.getElementById("output").innerHTML = 
+      
+      ` <hr>
+        <h4>${name}</h4>
+        <p> ${feedback}</p>
+        <hr>
+      `;
+    } else {
+      document.getElementById("output").innerHTML = "<p>No review found!</p>";
+    }
+
+</script>
+</body>
+</html>

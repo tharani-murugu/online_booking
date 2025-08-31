@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <div class="head1">
+    <h2 class="fhead">Online Room Booking</h2>
+    <div>
+    <button class="btn1"><a href="index.html">Register</a></button>
+    <button class="btn1"> <a href="index.html">Sign In</a></button></div>
+   </div>
+  <nav>
+    <h1 id="headingb">Booking.com</h1>
+    <ul>
+      <li><a href="index5.html">Home</a></li>
+      <li ><a href="about.html">About</a></li>
+      <li><a href="index5.html">Booking</a></li>
+      <li><a href="#Contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <div id="form"></div>
+    <div id="sb" style="display: flex;">
+        <div id="sub"></div>
+        <div id="bac"></div>
+    </div>
+    
+  </section>
+
+  <footer style="background-color:#1e3d59; color:white; padding:30px 0; margin-top:40px;">
+  <div style="max-width:1200px; margin:auto; display:flex; justify-content:space-between; flex-wrap:wrap;margin-left: 130px;">
+
+    <!-- About -->
+    <div style="flex:1; min-width:250px; padding:10px;">
+      <h3>Booking.com</h3>
+      <p>We provide the best online room booking experience with trusted reviews and secure payments.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div style="flex:1; min-width:200px; padding:10px;">
+      <h4>Quick Links</h4>
+      <ul style="list-style:none; padding:0;">
+        <li><a href="index5.html" style="color:white; text-decoration:none;">Home</a></li>
+        <li><a href="about.html" style="color:white; text-decoration:none;">About</a></li>
+        <li><a href="index5.html" style="color:white; text-decoration:none;">Booking</a></li>
+        <li><a href="#contact" style="color:white; text-decoration:none;">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div style="flex:1; min-width:200px; padding:10px;" id="Contact">
+      <h4>Contact Us</h4>
+      <p>Email: support@booking.com</p>
+      <p>Phone: +91 98765 43210</p>
+      <p>Location: Chennai, India</p>
+    </div>
+  </div>
+
+  <hr style="border:0.5px solid #555; margin:20px 0;">
+
+  <!-- Bottom -->
+  <div style="text-align:center; padding:1px;">
+    <p>&copy; 2025 Booking.com | All Rights Reserved</p>
+  </div>
+</footer>
+</body>
+<!--<script>
+    const fill = document.createElement('h1');
+    fill.textContent = "Fill Your Reviews";
+    document.getElementById('form').append(fill);
+
+    // Name
+    const name = document.createElement('label');
+    name.textContent = 'Name : ';
+    document.getElementById('form').append(name);
+    const nameinput = document.createElement('input');
+    nameinput.id = 'nameinput';
+    document.getElementById('form').append(nameinput);
+    document.getElementById('form').append(document.createElement('br'), document.createElement('br'));
+
+    // Age
+    const age = document.createElement('label');
+    age.textContent = 'Age : ';
+    document.getElementById('form').append(age);
+    const ageinput = document.createElement('input');
+    ageinput.id = 'ageinput';
+    ageinput.type = 'number';
+    document.getElementById('form').append(ageinput);
+    document.getElementById('form').append(document.createElement('br'), document.createElement('br'));
+
+    // Gender
+    const gender = document.createElement('label');
+    gender.textContent = 'Gender : ';
+    document.getElementById('form').append(gender);
+
+    const male = document.createElement('input');
+    male.type = 'radio';
+    male.name = 'gender';
+    male.value = 'Male';
+    document.getElementById('form').append(male);
+    const malen = document.createElement('label');
+    malen.textContent = ' Male ';
+    document.getElementById('form').append(malen);
+
+    const female = document.createElement('input');
+    female.type = 'radio';
+    female.name = 'gender';
+    female.value = 'Female';
+    document.getElementById('form').append(female);
+    const femalen = document.createElement('label');
+    femalen.textContent = ' Female ';
+    document.getElementById('form').append(femalen);
+    document.getElementById('form').append(document.createElement('br'), document.createElement('br'));
+
+    // Feedback
+    const feedback = document.createElement('label');
+    feedback.textContent = 'Feedback : ';
+    document.getElementById('form').append(feedback);
+    const feedbacki = document.createElement('textarea');
+    feedbacki.id = 'feedback';
+    document.getElementById('form').append(feedbacki);
+    document.getElementById('form').append(document.createElement('br'), document.createElement('br'));
+
+    // Submit
+    const submit = document.createElement('button');
+    submit.textContent = 'Submit ';
+    submit.style.backgroundColor = 'blue';
+    submit.style.border = 'none';
+    submit.style.padding = '12px';
+    submit.style.color = 'white';
+    submit.style.width = '100px';
+    submit.style.borderRadius = '10px';
+    submit.style.fontWeight = 'bold';
+    submit.style.marginTop = '10px';
+    document.getElementById('sub').append(submit);
+    
+    submit.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const Name = document.getElementById('nameinput').value;
+      const Age = document.getElementById('ageinput').value;
+      const feedback1 = document.getElementById('feedback').value;
+      const genderValue = document.querySelector('input[name="gender"]:checked');
+
+      if (Name && Age && feedback1 && genderValue) {
+         
+
+
+        // replace default review with new user review
+        showReview(Name, Age, genderValue.value, feedback1);
+      } else {
+        alert("⚠️ Please fill all fields!");
+      }
+    });
+    const back = document.createElement('button');
+    back.textContent = "Back";
+    back.style.border = 'none';
+    back.style.backgroundColor = "blue";
+    back.style.color = "white";
+    back.style.fontWeight = 'bold';
+    back.style.padding = '13px';
+    back.style.borderRadius = '10px';
+    back.style.marginTop = "10px";
+    back.style.marginLeft="10px";   
+    back.style.display='block';
+    back.style.width='100px';
+    document.getElementById('bac').append(back);
+    back.onclick = function () {
+        window.location.href = "review.html";
+        };
+ 
+
+    
+</script>-->
+
+<script>
+     let storedUser = {};
+    const fill = document.createElement('h1');
+    fill.textContent = "Fill Your Reviews";
+    fill.style.paddingTop='10px';
+   fill.style.paddingBottom='20px';
+    document.getElementById('form').append(fill);
+
+    // Name
+    const name = document.createElement('label');
+    name.textContent = 'Name : ';
+    document.getElementById('form').append(name);
+    const nameinput = document.createElement('input');
+    nameinput.id = 'nameinput';
+    nameinput.style.marginLeft='40px';
+    document.getElementById('form').append(nameinput);
+    document.getElementById('form').append(document.createElement('br'), document.createElement('br'));
+
+    // Age
+    const age = document.createElement('label');
+    age.textContent = 'Age : ';
+    document.getElementById('form').append(age);
+    const ageinput = document.createElement('input');
+    ageinput.id = 'ageinput';
+    ageinput.type = 'number';
+    ageinput.style.marginLeft='54px';
+    document.getElementById('form').append(ageinput);
+    document.getElementById('form').append(document.createElement('br'), document.createElement('br'));
+
+    // Gender
+    // Gender label
+const gender = document.createElement('label');
+gender.textContent = 'Gender : ';
+gender.setAttribute('id','gender1');
+document.getElementById('form').append(gender);
+
+// Male radio
+const male = document.createElement('input');
+male.type = 'radio';
+male.name = 'gender';   // same name for grouping
+male.value = 'Male';
+male.id = 'male';       // unique id
+male.style.marginLeft='27px';
+document.getElementById('form').append(male);
+
+const malen = document.createElement('label');
+malen.textContent = ' Male ';
+malen.setAttribute('for','male'); // links label to input
+document.getElementById('form').append(malen);
+
+// Female radio
+const female = document.createElement('input');
+female.type = 'radio';
+female.name = 'gender';  // same name for grouping
+female.value = 'Female';
+female.id = 'female';    // unique id
+document.getElementById('form').append(female);
+
+const femalen = document.createElement('label');
+femalen.textContent = ' Female ';
+femalen.setAttribute('for','female'); 
+document.getElementById('form').append(femalen);
+
+document.getElementById('form').append(document.createElement('br'), document.createElement('br'));
+
+
+const genderValue = document.querySelector('input[name="gender"]:checked');
+if (genderValue) {
+   console.log("Selected Gender: " + genderValue.value); 
+   // either "Male" or "Female"
+} else {
+   console.log("No gender selected");
+}
+
+    // ⭐ Star Rating
+    const ratingLabel = document.createElement('label');
+    ratingLabel.textContent = "Rating  : ";
+    document.getElementById('form').append(ratingLabel);
+
+    const ratingDiv = document.createElement('div');
+    ratingDiv.id = "rating";
+    ratingDiv.style.fontSize = "25px";
+    ratingDiv.style.cursor = "pointer";
+    ratingDiv.style.marginLeft='90px';
+    ratingDiv.style.marginTop='-27px';
+    document.getElementById('form').append(ratingDiv);
+
+    let selectedRating = 0;
+    for (let i = 1; i <= 5; i++) {
+        const star = document.createElement('span');
+        star.textContent = "☆"; // empty star
+        star.dataset.value = i;
+
+        // hover effect
+        star.addEventListener("mouseover", function () {
+            highlightStars(i);
+        });
+
+        // reset hover
+        star.addEventListener("mouseout", function () {
+            highlightStars(selectedRating);
+        });
+
+        // click to select
+        star.addEventListener("click", function () {
+            selectedRating = i;
+            highlightStars(selectedRating);
+        });
+
+        ratingDiv.appendChild(star);
+    }
+
+    function highlightStars(rating) {
+        const stars = ratingDiv.querySelectorAll("span");
+        stars.forEach((star, index) => {
+            if (index < rating) {
+                star.textContent = "★"; // filled star
+                star.style.color = "gold";
+            } else {
+                star.textContent = "☆"; // empty star
+                star.style.color = "black";
+            }
+        });
+    }
+
+    document.getElementById('form').append(document.createElement('br'), document.createElement('br'));
+
+    // Feedback
+    const feedback = document.createElement('label');
+    feedback.textContent = 'Feedback : ';
+    document.getElementById('form').append(feedback);
+    const feedbacki = document.createElement('textarea');
+    feedbacki.id = 'feedback';
+    feedbacki.style.marginLeft='10px';
+    document.getElementById('form').append(feedbacki);
+    document.getElementById('form').append(document.createElement('br'), document.createElement('br'));
+
+    // Submit
+    const submit = document.createElement('button');
+    submit.textContent = 'Submit ';
+    submit.style.backgroundColor = 'blue';
+    submit.style.border = 'none';
+    submit.style.padding = '12px';
+    submit.style.color = 'white';
+    submit.style.width = '100px';
+    submit.style.borderRadius = '10px';
+    submit.style.fontWeight = 'bold';
+    submit.style.marginTop = '10px';
+    document.getElementById('sub').append(submit);
+
+    submit.addEventListener('click', function (e) {
+    
+      const Name = document.getElementById("nameinput").value;
+      const Age = document.getElementById("ageinput").value;
+      const genderValue = document.querySelector('input[name="gender"]:checked');
+      const feedback1 = document.getElementById("feedback").value;
+      
+
+        if(!Name || !Age || !genderValue|| !selectedRating || !feedback1 ){
+            alert('fill the form');
+        }    
+        else{
+                localStorage.setItem("Name", Name);
+                localStorage.setItem("Age", Age);
+                localStorage.setItem("Gender", genderValue.value);
+                localStorage.setItem("selectedRating", selectedRating);
+                localStorage.setItem("feedback1", feedback1)
+                window.location.href = "review.html";
+        }
+    
+
+    
+});
+
+
+    // Back button
+    const back = document.createElement('button');
+    back.textContent = "Back";
+    back.style.border = 'none';
+    back.style.backgroundColor = "blue";
+    back.style.color = "white";
+    back.style.fontWeight = 'bold';
+    back.style.padding = '13px';
+    back.style.borderRadius = '10px';
+    back.style.marginTop = "10px";
+    back.style.marginLeft="10px";   
+    back.style.display='block';
+    back.style.width='100px';
+    document.getElementById('bac').append(back);
+
+    back.onclick = function () {
+        window.location.href = "review.html";
+    };
+</script>
+
+</html>

@@ -1,0 +1,121 @@
+ body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fb;
+      scroll-behavior: smooth;
+    }
+
+   /* head1 */
+   .head1{
+    display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+     text-align: center;
+     padding-bottom: 2px;
+   }
+   .fhead{
+    text-align: left;
+    color: #3a6ea5;
+    display: flex;
+    justify-content:right;
+    margin-left: 42%;
+   }
+   .btn1{
+      background:  #3a6ea5;;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: bold;
+      padding: 10px;
+      margin-right: 15px;
+   }
+   .btn1 a{
+     text-decoration: none;
+      color: white;
+      font-size: 15px;
+    
+   }
+    button.btn1:hover {
+      background: #7e85e4;
+    }
+    /* Navbar */
+    nav {
+      background: #1e3d59;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav h1 {
+      color: #fff;
+      margin: 0;
+      font-size: 22px;
+      letter-spacing: 1px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      
+    }
+    nav ul li {
+      margin-left: 20px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+      padding: 8px 12px;
+      border-radius: 6px;
+    }
+    nav ul li a:hover {
+      background: #3a6ea5;
+    }
+    /*body*/
+     section {
+      width: 70%;
+      margin: 40px auto;
+      background: #e6e6e6;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    }
+    .chennai{
+        color:#02303b;
+        font-weight: bold;
+        font-size: 40px;
+    }
+    .card {
+        width: 96%;
+      background: #f9fafa;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 15px 0;
+      box-shadow: 0px 2px 6px rgba(0,0,0,0.05);
+      display: flex;
+      
+    }
+    
+    .card h3 {
+      margin: 0 0 10px;
+      color: #1e3d59;
+    }
+    .text{
+        margin-left: 10%;
+    }
+    .image img{
+        height: 200px;
+        width: 280px;
+    }
+
+
+
+
+    
